@@ -9,3 +9,9 @@ margin_left = 315.0
 margin_right = 675.0
 margin_bottom = 603.0
 color = Color( 0.168627, 0.254902, 0.956863, 1 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 420.0
+margin_top = 488.0
+margin_right = 590.0
+margin_bottom = 534.0
