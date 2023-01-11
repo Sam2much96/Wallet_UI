@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Wallet UI Template Godot"
-run/main_scene="res://AccountsDashboard1.tscn"
+run/main_scene="res://Wallet Scenes/AccountsDashboard1.tscn"
 config/icon="res://icon.png"
 
 [physics]
