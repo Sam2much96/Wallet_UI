@@ -34,17 +34,38 @@ margin_right = 64.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 1 )
 
+[node name="Label" type="Label" parent="GridContainer/TextureButton"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureButton2" type="TextureButton" parent="GridContainer"]
 margin_left = 68.0
 margin_right = 132.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 1 )
 
+[node name="Label" type="Label" parent="GridContainer/TextureButton2"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="TextureButton3" type="TextureButton" parent="GridContainer"]
 margin_top = 68.0
 margin_right = 64.0
 margin_bottom = 132.0
 texture_normal = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="GridContainer/TextureButton3"]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = 298.0
