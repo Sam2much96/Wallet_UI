@@ -12,12 +12,12 @@ position = Vector2( 197, 354 )
 
 [node name="Line2D2" type="Line2D" parent="YSort"]
 position = Vector2( -180, -95 )
-points = PoolVector2Array( 149, 79, 181, 44, 212, 80 )
+points = PoolVector2Array( 149, 79, 181, 44, 205, 81 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Line2D3" type="Line2D" parent="YSort"]
 position = Vector2( -181, -136 )
-points = PoolVector2Array( 149, 79, 181, 44, 215, 80 )
+points = PoolVector2Array( 149, 79, 181, 44, 210, 77 )
 default_color = Color( 0, 0, 0, 1 )
 
 [node name="Line2D4" type="Line2D" parent="YSort"]
