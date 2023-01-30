@@ -48,20 +48,45 @@ margin_bottom = 464.0
 theme = ExtResource( 3 )
 text = "Reject"
 
-[node name="Label" type="Label" parent="."]
-margin_left = 331.0
-margin_top = 42.0
-margin_right = 636.0
-margin_bottom = 78.0
-theme = ExtResource( 1 )
-text = "Registration Complete"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 402.0
+margin_top = 102.0
+margin_right = 502.0
+margin_bottom = 148.0
 
-[node name="Label2" type="Label" parent="."]
-margin_left = 345.0
-margin_top = 113.0
-margin_right = 625.0
-margin_bottom = 172.0
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_right = 167.0
+margin_bottom = 21.0
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_right = 68.0
+margin_bottom = 21.0
 theme = ExtResource( 1 )
-text = "You will receive a text from 
-us shortly"
+text = "Amount: "
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+margin_left = 72.0
+margin_right = 121.0
+margin_bottom = 21.0
+theme = ExtResource( 1 )
+text = "$3000"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 25.0
+margin_right = 167.0
+margin_bottom = 46.0
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_right = 100.0
+margin_bottom = 21.0
+theme = ExtResource( 1 )
+text = "Merchant ID: "
+align = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer2"]
+margin_left = 104.0
+margin_right = 167.0
+margin_bottom = 21.0
+theme = ExtResource( 1 )
+text = "#RET23"
 align = 1
