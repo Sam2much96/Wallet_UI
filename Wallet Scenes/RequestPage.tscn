@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://themes/Bold.tres" type="Theme" id=1]
 [ext_resource path="res://themes/Light.tres" type="Theme" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://themes/Regular.tres" type="Theme" id=6]
 [ext_resource path="res://themes/Panel+blue.tres" type="Theme" id=7]
 [ext_resource path="res://icon.png" type="Texture" id=8]
+[ext_resource path="res://Wallet Scenes/ProfileIcon.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Wallet Scenes/BookmarksIcon.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Wallet Scenes/ListsIcon.tscn" type="PackedScene" id=11]
 
 [sub_resource type="Theme" id=1]
 Panel/styles/panel = ExtResource( 5 )
@@ -251,3 +254,18 @@ rect_scale = Vector2( 0.7, 0.7 )
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 0.262745, 0.27451, 0.960784, 1 )
 text = "view more >"
+
+[node name="Icon1" parent="." instance=ExtResource( 9 )]
+offset = Vector2( 250, 400 )
+scale = Vector2( 0.2, 0.2 )
+transform = Transform2D( 0.2, 0, 0, 0.2, 250, 400 )
+
+[node name="Icon2" parent="." instance=ExtResource( 11 )]
+offset = Vector2( 165, 420 )
+scale = Vector2( 0.25, 0.25 )
+transform = Transform2D( 0.25, 0, 0, 0.25, 165, 420 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 10 )]
+offset = Vector2( 160, 500 )
+scale = Vector2( 0.3, 0.3 )
+transform = Transform2D( 0.3, 0, 0, 0.3, 160, 500 )
