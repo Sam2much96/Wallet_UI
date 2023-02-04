@@ -265,7 +265,7 @@ offset = Vector2( 165, 420 )
 scale = Vector2( 0.25, 0.25 )
 transform = Transform2D( 0.25, 0, 0, 0.25, 165, 420 )
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 10 )]
+[node name="Icon3" parent="." instance=ExtResource( 10 )]
 offset = Vector2( 160, 500 )
 scale = Vector2( 0.3, 0.3 )
 transform = Transform2D( 0.3, 0, 0, 0.3, 160, 500 )
