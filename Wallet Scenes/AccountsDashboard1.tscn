@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://themes/Buttons.tres" type="Theme" id=1]
 [ext_resource path="res://themes/Panel+white.tres" type="StyleBox" id=2]
@@ -6,6 +6,10 @@
 [ext_resource path="res://themes/Bold.tres" type="Theme" id=4]
 [ext_resource path="res://Wallet fonts/Roboto-Light.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://themes/Panel+blue+2.tres" type="StyleBox" id=6]
+[ext_resource path="res://themes/Panel+blue+3.tres" type="StyleBox" id=7]
+
+[sub_resource type="Theme" id=6]
+Panel/styles/panel = ExtResource( 7 )
 
 [sub_resource type="Theme" id=3]
 Panel/styles/panel = ExtResource( 2 )
@@ -20,20 +24,19 @@ default_font = SubResource( 4 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 330.0
+margin_left = 306.0
 margin_top = 5.0
-margin_right = 642.0
+margin_right = 656.0
 margin_bottom = 602.0
 color = Color( 0.811765, 0.811765, 0.811765, 1 )
-
-[node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 330.0
-margin_top = 5.0
-margin_right = 642.0
-margin_bottom = 183.0
-color = Color( 0.211765, 0.435294, 0.905882, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Button" type="Button" parent="."]
 margin_left = 371.0
@@ -51,8 +54,28 @@ margin_bottom = 334.0
 theme = ExtResource( 1 )
 text = "Make Payment"
 
-[node name="YSort" type="YSort" parent="."]
-position = Vector2( 372, 264 )
+[node name="YSort" type="Control" parent="."]
+margin_left = 370.0
+margin_top = 251.0
+margin_right = 370.0
+margin_bottom = 251.0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Panel2" type="Panel" parent="YSort"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -260.0
+margin_right = 285.0
+margin_bottom = -92.0
+theme = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Panel" type="Panel" parent="YSort"]
 margin_left = -9.0
@@ -60,6 +83,9 @@ margin_top = -176.0
 margin_right = 236.0
 margin_bottom = -129.0
 custom_styles/panel = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Label" type="Label" parent="YSort"]
 margin_left = 36.0
@@ -68,6 +94,9 @@ margin_right = 180.0
 margin_bottom = -135.0
 theme = ExtResource( 4 )
 text = "$4,000.00"
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
 [node name="Label2" type="Label" parent="YSort"]
 margin_left = 14.0
@@ -78,8 +107,11 @@ rect_scale = Vector2( 0.6, 0.6 )
 theme = ExtResource( 3 )
 text = "Address: "
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
 
-[node name="YSort2" type="YSort" parent="."]
+[node name="YSort2" type="Control" parent="."]
 
 [node name="Panel" type="Panel" parent="YSort2"]
 margin_left = 354.0
@@ -201,6 +233,7 @@ theme = ExtResource( 3 )
 text = "see full list >"
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 margin_left = 331.0
 margin_top = 179.0
 margin_right = 641.0
@@ -247,3 +280,16 @@ margin_top = 39.0
 margin_right = -4.0
 margin_bottom = -4.0
 tab_align = 0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -238.0
+margin_top = -98.0
+margin_right = 238.0
+margin_bottom = 98.0
+border_width = 2.3
+editor_only = false
