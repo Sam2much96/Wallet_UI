@@ -23,10 +23,8 @@ margin_bottom = 309.0
 
 [node name="ColorRect" type="ColorRect" parent="GridContainer"]
 visible = false
-margin_left = 300.0
-margin_top = -4.0
-margin_right = 680.0
-margin_bottom = 604.0
+margin_right = 82.0
+margin_bottom = 60.0
 
 [node name="Label" type="Label" parent="GridContainer"]
 modulate = Color( 0.109804, 0.352941, 0.862745, 1 )
