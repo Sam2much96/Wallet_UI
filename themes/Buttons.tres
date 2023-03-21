@@ -3,7 +3,7 @@
 [ext_resource path="res://Wallet fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
-size = 21
+size = 64
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=4]
