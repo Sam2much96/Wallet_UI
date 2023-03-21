@@ -1,27 +1,33 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://themes/Bold.tres" type="Theme" id=1]
 [ext_resource path="res://themes/Light.tres" type="Theme" id=2]
 [ext_resource path="res://themes/Buttons_white.tres" type="Theme" id=3]
+[ext_resource path="res://themes/Panel+blue+3.tres" type="StyleBox" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Panel" type="Panel" parent="."]
+margin_right = 1024.0
+margin_bottom = 605.0
+custom_styles/panel = ExtResource( 4 )
+
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 213.0
-margin_right = 788.0
-margin_bottom = 603.0
+visible = false
+margin_left = 212.0
+margin_top = -4.0
+margin_right = 787.0
+margin_bottom = 599.0
 color = Color( 0.168627, 0.254902, 0.956863, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Button" type="Button" parent="."]
-margin_left = 405.0
-margin_top = 475.0
-margin_right = 596.0
-margin_bottom = 516.0
+margin_left = 396.0
+margin_top = 507.0
+margin_right = 765.0
+margin_bottom = 582.0
+rect_scale = Vector2( 0.5759, 0.5759 )
 theme = ExtResource( 3 )
 text = "Home"
 
