@@ -33,12 +33,15 @@ theme = ExtResource( 4 )
 text = "Copy Mnemonic"
 
 [node name="Button2" type="Button" parent="."]
-margin_left = 397.0
-margin_top = 508.0
-margin_right = 596.0
-margin_bottom = 554.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 396.0
+margin_top = 507.0
+margin_right = -327.0
+margin_bottom = -26.0
+rect_scale = Vector2( 0.665041, 0.665041 )
 theme = ExtResource( 3 )
-text = "Proceed to Home"
+text = "Home"
 
 [node name="Label" type="Label" parent="."]
 margin_left = 349.0
