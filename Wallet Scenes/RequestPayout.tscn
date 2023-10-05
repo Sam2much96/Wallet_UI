@@ -15,36 +15,40 @@ margin_right = 1017.0
 margin_bottom = 592.0
 custom_styles/panel = ExtResource( 3 )
 
-[node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 377.0
-margin_top = 145.0
-margin_right = 592.0
-margin_bottom = 309.0
+[node name="YSort" type="YSort" parent="."]
+position = Vector2( 511, 340 )
+scale = Vector2( 0.866782, 0.866782 )
 
-[node name="ColorRect" type="ColorRect" parent="GridContainer"]
+[node name="GridContainer" type="GridContainer" parent="YSort"]
+margin_left = -196.128
+margin_top = -189.206
+margin_right = 159.872
+margin_bottom = -23.2056
+
+[node name="ColorRect" type="ColorRect" parent="YSort/GridContainer"]
 visible = false
 margin_right = 82.0
 margin_bottom = 60.0
 
-[node name="Label" type="Label" parent="GridContainer"]
+[node name="Label" type="Label" parent="YSort/GridContainer"]
 modulate = Color( 0.109804, 0.352941, 0.862745, 1 )
 margin_right = 356.0
 margin_bottom = 60.0
 theme = ExtResource( 1 )
 text = "Request Payout"
 
-[node name="Label2" type="Label" parent="GridContainer"]
+[node name="Label2" type="Label" parent="YSort/GridContainer"]
 margin_top = 64.0
 margin_right = 356.0
 margin_bottom = 78.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="GridContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="YSort/GridContainer"]
 margin_top = 82.0
 margin_right = 356.0
 margin_bottom = 130.0
 alignment = 1
 
-[node name="LineEdit" type="LineEdit" parent="GridContainer/VBoxContainer"]
+[node name="LineEdit" type="LineEdit" parent="YSort/GridContainer/VBoxContainer"]
 margin_right = 356.0
 margin_bottom = 22.0
 theme = ExtResource( 4 )
@@ -54,7 +58,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LineEdit2" type="LineEdit" parent="GridContainer/VBoxContainer"]
+[node name="LineEdit2" type="LineEdit" parent="YSort/GridContainer/VBoxContainer"]
 margin_top = 26.0
 margin_right = 356.0
 margin_bottom = 48.0
@@ -62,21 +66,21 @@ theme = ExtResource( 4 )
 text = "Amount"
 align = 1
 
-[node name="Label3" type="Label" parent="GridContainer"]
+[node name="Label3" type="Label" parent="YSort/GridContainer"]
 margin_top = 134.0
 margin_right = 356.0
 margin_bottom = 148.0
 
-[node name="Label4" type="Label" parent="GridContainer"]
+[node name="Label4" type="Label" parent="YSort/GridContainer"]
 margin_top = 152.0
 margin_right = 356.0
 margin_bottom = 166.0
 
-[node name="Button" type="Button" parent="."]
-margin_left = 451.0
-margin_top = 304.0
-margin_right = 807.0
-margin_bottom = 380.0
+[node name="Button" type="Button" parent="YSort"]
+margin_left = -117.677
+margin_top = -10.3833
+margin_right = 238.323
+margin_bottom = 65.6167
 rect_scale = Vector2( 0.549462, 0.549462 )
 theme = ExtResource( 2 )
 text = "Continue"

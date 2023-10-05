@@ -1,24 +1,12 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://themes/Buttons.tres" type="Theme" id=1]
 [ext_resource path="res://themes/Panel+white.tres" type="StyleBox" id=2]
-[ext_resource path="res://themes/NumbersFont.tres" type="Theme" id=3]
+[ext_resource path="res://themes/Light.tres" type="Theme" id=3]
 [ext_resource path="res://themes/Bold.tres" type="Theme" id=4]
-[ext_resource path="res://Wallet fonts/Roboto-Light.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://themes/Dashboard+Panel+Blue.tres" type="Theme" id=5]
 [ext_resource path="res://themes/Panel+blue+2.tres" type="StyleBox" id=6]
-[ext_resource path="res://themes/Panel+blue+3.tres" type="StyleBox" id=7]
-[ext_resource path="res://themes/Panel+Grey.tres" type="StyleBox" id=8]
-[ext_resource path="res://themes/Light.tres" type="Theme" id=9]
-
-[sub_resource type="DynamicFont" id=4]
-size = 17
-font_data = ExtResource( 5 )
-
-[sub_resource type="Theme" id=5]
-default_font = SubResource( 4 )
-
-[sub_resource type="Theme" id=6]
-Panel/styles/panel = ExtResource( 7 )
+[ext_resource path="res://themes/TabTheme.tres" type="Theme" id=7]
 
 [sub_resource type="Theme" id=3]
 Panel/styles/panel = ExtResource( 2 )
@@ -26,109 +14,23 @@ Panel/styles/panel = ExtResource( 2 )
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
-[node name="Panel2" type="Panel" parent="."]
-visible = false
-margin_right = 1022.0
-margin_bottom = 606.0
-custom_styles/panel = ExtResource( 8 )
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -12.0
+margin_top = 5.0
+margin_right = 1031.0
+margin_bottom = 602.0
+color = Color( 0.811765, 0.811765, 0.811765, 1 )
 
-[node name="Panel" type="Panel" parent="."]
-margin_left = 310.0
-margin_top = 152.0
-margin_right = 656.0
-margin_bottom = 608.0
-theme = SubResource( 5 )
-custom_styles/panel = ExtResource( 8 )
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -14.0
+margin_top = 5.0
+margin_right = 1032.0
+margin_bottom = 183.0
+color = Color( 0.211765, 0.435294, 0.905882, 1 )
 
-[node name="TabContainer" type="TabContainer" parent="Panel"]
-visible = false
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -54.5
-margin_right = 54.5
-margin_bottom = 74.0
-tab_align = 2
-
-[node name="Dashboard" type="Tabs" parent="Panel/TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 39.0
-margin_right = -4.0
-margin_bottom = -4.0
-tab_align = 0
-
-[node name="Requests" type="Tabs" parent="Panel/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 39.0
-margin_right = -4.0
-margin_bottom = -4.0
-tab_align = 0
-
-[node name="Notifications" type="Tabs" parent="Panel/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 39.0
-margin_right = -4.0
-margin_bottom = -4.0
-tab_align = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 355.0
-margin_top = 188.0
-margin_right = 935.0
-margin_bottom = 362.0
-rect_scale = Vector2( 0.476647, 0.476647 )
-
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_right = 580.0
-margin_bottom = 76.0
-theme = ExtResource( 1 )
-text = "Fund Account"
-
-[node name="Label" type="Label" parent="VBoxContainer"]
-margin_top = 80.0
-margin_right = 580.0
-margin_bottom = 94.0
-
-[node name="Button2" type="Button" parent="VBoxContainer"]
-margin_top = 98.0
-margin_right = 580.0
-margin_bottom = 174.0
-theme = ExtResource( 1 )
-text = "Make Payment"
-
-[node name="YSort" type="Control" parent="."]
-margin_left = 370.0
-margin_top = 251.0
-margin_right = 370.0
-margin_bottom = 251.0
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Panel2" type="Panel" parent="YSort"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -60.0
-margin_top = -260.0
-margin_right = 285.0
-margin_bottom = -92.0
-theme = SubResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
+[node name="YSort" type="YSort" parent="."]
+position = Vector2( 372, 264 )
 
 [node name="Panel" type="Panel" parent="YSort"]
 margin_left = -9.0
@@ -136,9 +38,6 @@ margin_top = -176.0
 margin_right = 236.0
 margin_bottom = -129.0
 custom_styles/panel = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="Label" type="Label" parent="YSort"]
 margin_left = 36.0
@@ -147,9 +46,6 @@ margin_right = 180.0
 margin_bottom = -135.0
 theme = ExtResource( 4 )
 text = "$4,000.00"
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
 [node name="Label2" type="Label" parent="YSort"]
 margin_left = 14.0
@@ -157,113 +53,137 @@ margin_top = -225.0
 margin_right = 336.0
 margin_bottom = -157.0
 rect_scale = Vector2( 0.6, 0.6 )
-theme = ExtResource( 9 )
+theme = ExtResource( 3 )
 text = "Address: "
 autowrap = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
 
-[node name="YSort2" type="Control" parent="."]
+[node name="Panel" type="Panel" parent="."]
+margin_left = -5.0
+margin_top = 179.0
+margin_right = 1034.0
+margin_bottom = 184.0
+theme = ExtResource( 5 )
 
-[node name="Panel" type="Panel" parent="YSort2"]
+[node name="TabContainer" type="TabContainer" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -166.0
+margin_top = -29.5
+margin_right = 134.0
+margin_bottom = 412.5
+theme = ExtResource( 7 )
+tab_align = 2
+
+[node name="Dashboard" type="Tabs" parent="Panel/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 31.0
+theme = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="Panel/TabContainer/Dashboard"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 52.0
+margin_top = 36.0
+margin_right = 165.0
+margin_bottom = -295.0
+rect_scale = Vector2( 0.523995, 0.523995 )
+theme = ExtResource( 1 )
+text = "Fund Account"
+
+[node name="Button2" type="Button" parent="Panel/TabContainer/Dashboard"]
+margin_left = 53.0
+margin_top = 108.0
+margin_right = 474.0
+margin_bottom = 184.0
+rect_scale = Vector2( 0.499054, 0.499054 )
+theme = ExtResource( 1 )
+text = "Make Payment"
+
+[node name="YSort2" type="YSort" parent="Panel/TabContainer/Dashboard"]
+position = Vector2( -331, -193 )
+
+[node name="Panel" type="Panel" parent="Panel/TabContainer/Dashboard/YSort2"]
 margin_left = 354.0
 margin_top = 392.0
 margin_right = 612.0
 margin_bottom = 557.0
 theme = SubResource( 3 )
 
-[node name="Label2" type="Label" parent="YSort2"]
+[node name="Label" type="Label" parent="Panel/TabContainer/Dashboard/YSort2"]
 modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
-margin_left = 504.0
-margin_top = 558.0
-margin_right = 854.0
-margin_bottom = 635.0
-rect_scale = Vector2( 0.413695, 0.413695 )
-theme = ExtResource( 3 )
-text = "see full list >"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="YSort2"]
-margin_left = 362.0
-margin_top = 409.0
-margin_right = 1106.0
-margin_bottom = 810.0
-rect_scale = Vector2( 0.319052, 0.327723 )
-
-[node name="Label" type="Label" parent="YSort2/VBoxContainer"]
-modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
-margin_right = 744.0
-margin_bottom = 77.0
+margin_left = 372.0
+margin_top = 406.0
+margin_right = 523.0
+margin_bottom = 434.0
+rect_scale = Vector2( 0.6, 0.6 )
 theme = ExtResource( 3 )
 text = "funding history"
 
-[node name="Label2" type="Label" parent="YSort2/VBoxContainer"]
-visible = false
-modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
-margin_top = 81.0
-margin_right = 744.0
-margin_bottom = 158.0
-theme = ExtResource( 3 )
-
-[node name="HBoxContainer" type="HBoxContainer" parent="YSort2/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/TabContainer/Dashboard/YSort2"]
 modulate = Color( 0.541176, 0.541176, 0.541176, 1 )
-margin_top = 81.0
-margin_right = 744.0
-margin_bottom = 320.0
+margin_left = 375.0
+margin_top = 436.0
+margin_right = 451.0
+margin_bottom = 476.0
+rect_scale = Vector2( 0.7, 0.7 )
 theme = ExtResource( 3 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="YSort2/VBoxContainer/HBoxContainer"]
-margin_right = 328.0
-margin_bottom = 239.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer"]
+margin_right = 117.0
+margin_bottom = 92.0
 
-[node name="Label2" type="Label" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_right = 328.0
-margin_bottom = 77.0
+[node name="Label2" type="Label" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer"]
+margin_right = 117.0
+margin_bottom = 28.0
 text = "March 17th"
 
-[node name="Label3" type="Label" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 81.0
-margin_right = 328.0
-margin_bottom = 158.0
+[node name="Label3" type="Label" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 117.0
+margin_bottom = 60.0
 text = "March 17th"
 
-[node name="Label4" type="Label" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 162.0
-margin_right = 328.0
-margin_bottom = 239.0
+[node name="Label4" type="Label" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 117.0
+margin_bottom = 92.0
 text = "March 17th"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="YSort2/VBoxContainer/HBoxContainer"]
-margin_left = 332.0
-margin_right = 744.0
-margin_bottom = 239.0
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer"]
+margin_left = 121.0
+margin_right = 271.0
+margin_bottom = 92.0
 
-[node name="Label2" type="Label" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label2" type="Label" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2"]
 modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
-margin_right = 412.0
-margin_bottom = 77.0
+margin_right = 150.0
+margin_bottom = 28.0
 theme = ExtResource( 3 )
 text = "      +   $300.00"
 
-[node name="Label3" type="Label" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label3" type="Label" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2"]
 modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
-margin_top = 81.0
-margin_right = 412.0
-margin_bottom = 158.0
+margin_top = 32.0
+margin_right = 150.0
+margin_bottom = 60.0
 theme = ExtResource( 3 )
 text = "      +   $720.00"
 
-[node name="Label4" type="Label" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="Label4" type="Label" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2"]
 modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
-margin_top = 162.0
-margin_right = 412.0
-margin_bottom = 239.0
+margin_top = 64.0
+margin_right = 150.0
+margin_bottom = 92.0
 theme = ExtResource( 3 )
 text = "      +   $256.00"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2"]
 
-[node name="Line2D" type="Line2D" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2/CanvasLayer"]
+[node name="Line2D" type="Line2D" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2/CanvasLayer"]
 visible = false
 position = Vector2( 459.7, 436 )
 scale = Vector2( 0.7, 0.7 )
@@ -271,7 +191,7 @@ points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
 width = 3.0
 default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
 
-[node name="Line2D2" type="Line2D" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2/CanvasLayer"]
+[node name="Line2D2" type="Line2D" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2/CanvasLayer"]
 visible = false
 position = Vector2( 461, 461 )
 scale = Vector2( 0.7, 0.7 )
@@ -279,7 +199,7 @@ points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
 width = 3.0
 default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
 
-[node name="Line2D3" type="Line2D" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2/CanvasLayer"]
+[node name="Line2D3" type="Line2D" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2/CanvasLayer"]
 visible = false
 position = Vector2( 461, 483 )
 scale = Vector2( 0.7, 0.7 )
@@ -287,7 +207,7 @@ points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
 width = 3.0
 default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
 
-[node name="Line2D4" type="Line2D" parent="YSort2/VBoxContainer/HBoxContainer/VBoxContainer2/CanvasLayer"]
+[node name="Line2D4" type="Line2D" parent="Panel/TabContainer/Dashboard/YSort2/HBoxContainer/VBoxContainer2/CanvasLayer"]
 visible = false
 position = Vector2( 459, 507 )
 scale = Vector2( 0.7, 0.7 )
@@ -295,15 +215,433 @@ points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
 width = 3.0
 default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
 
-[node name="ReferenceRect" type="ReferenceRect" parent="."]
+[node name="Label2" type="Label" parent="Panel/TabContainer/Dashboard/YSort2"]
+modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
+margin_left = 507.0
+margin_top = 514.0
+margin_right = 658.0
+margin_bottom = 542.0
+rect_scale = Vector2( 0.6, 0.6 )
+theme = ExtResource( 3 )
+text = "see full list >"
+
+[node name="Requests" type="Tabs" parent="Panel/TabContainer"]
 visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -238.0
-margin_top = -98.0
-margin_right = 238.0
-margin_bottom = 98.0
-border_width = 2.3
-editor_only = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 31.0
+margin_right = -4.0
+margin_bottom = -4.0
+tab_align = 0
+
+[node name="Button3" type="Button" parent="Panel/TabContainer/Requests"]
+margin_left = 32.5
+margin_top = 20.0
+margin_right = 519.5
+margin_bottom = 96.0
+rect_scale = Vector2( 0.499054, 0.499054 )
+theme = ExtResource( 1 )
+text = "Receive Payment"
+
+[node name="Button4" type="Button" parent="Panel/TabContainer/Requests"]
+margin_left = 46.0
+margin_top = 298.0
+margin_right = 467.0
+margin_bottom = 374.0
+rect_scale = Vector2( 0.499054, 0.499054 )
+theme = ExtResource( 1 )
+text = "Request Payout"
+
+[node name="YSort3" type="YSort" parent="Panel/TabContainer/Requests"]
+position = Vector2( -328, -309 )
+
+[node name="Panel" type="Panel" parent="Panel/TabContainer/Requests/YSort3"]
+margin_left = 354.0
+margin_top = 392.0
+margin_right = 612.0
+margin_bottom = 557.0
+theme = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Panel/TabContainer/Requests/YSort3"]
+modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
+margin_left = 372.0
+margin_top = 406.0
+margin_right = 523.0
+margin_bottom = 434.0
+rect_scale = Vector2( 0.6, 0.6 )
+theme = ExtResource( 3 )
+text = "funding history"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/TabContainer/Requests/YSort3"]
+modulate = Color( 0.541176, 0.541176, 0.541176, 1 )
+margin_left = 375.0
+margin_top = 436.0
+margin_right = 451.0
+margin_bottom = 476.0
+rect_scale = Vector2( 0.7, 0.7 )
+theme = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer"]
+margin_right = 117.0
+margin_bottom = 92.0
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer"]
+margin_right = 117.0
+margin_bottom = 28.0
+text = "March 17th"
+
+[node name="Label3" type="Label" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 117.0
+margin_bottom = 60.0
+text = "March 17th"
+
+[node name="Label4" type="Label" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 117.0
+margin_bottom = 92.0
+text = "March 17th"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer"]
+margin_left = 121.0
+margin_right = 271.0
+margin_bottom = 92.0
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_right = 150.0
+margin_bottom = 28.0
+theme = ExtResource( 3 )
+text = "      +   $300.00"
+
+[node name="Label3" type="Label" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 32.0
+margin_right = 150.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+text = "      +   $720.00"
+
+[node name="Label4" type="Label" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 64.0
+margin_right = 150.0
+margin_bottom = 92.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2"]
+
+[node name="Line2D" type="Line2D" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 459.7, 436 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Line2D2" type="Line2D" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 461, 461 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Line2D3" type="Line2D" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 461, 483 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Line2D4" type="Line2D" parent="Panel/TabContainer/Requests/YSort3/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 459, 507 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Requests/YSort3"]
+modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
+margin_left = 507.0
+margin_top = 514.0
+margin_right = 658.0
+margin_bottom = 542.0
+rect_scale = Vector2( 0.6, 0.6 )
+theme = ExtResource( 3 )
+text = "see full list >"
+
+[node name="Notifications" type="Tabs" parent="Panel/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 31.0
+margin_right = -4.0
+margin_bottom = -4.0
+tab_align = 0
+
+[node name="YSort4" type="YSort" parent="Panel/TabContainer/Notifications"]
+position = Vector2( -325.5, -364 )
+
+[node name="Panel" type="Panel" parent="Panel/TabContainer/Notifications/YSort4"]
+margin_left = 354.0
+margin_top = 392.0
+margin_right = 612.0
+margin_bottom = 765.0
+theme = SubResource( 3 )
+
+[node name="Label" type="Label" parent="Panel/TabContainer/Notifications/YSort4"]
+modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
+margin_left = 372.0
+margin_top = 406.0
+margin_right = 523.0
+margin_bottom = 434.0
+rect_scale = Vector2( 0.6, 0.6 )
+theme = ExtResource( 3 )
+text = "Transaction history"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/TabContainer/Notifications/YSort4"]
+modulate = Color( 0.541176, 0.541176, 0.541176, 1 )
+margin_left = 375.0
+margin_top = 436.0
+margin_right = 451.0
+margin_bottom = 476.0
+rect_scale = Vector2( 0.7, 0.7 )
+theme = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer"]
+margin_right = 117.0
+margin_bottom = 412.0
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_right = 117.0
+margin_bottom = 28.0
+text = "March 17th"
+
+[node name="Label3" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 32.0
+margin_right = 117.0
+margin_bottom = 60.0
+text = "March 17th"
+
+[node name="Label4" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 64.0
+margin_right = 117.0
+margin_bottom = 92.0
+text = "March 17th"
+
+[node name="Label5" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 96.0
+margin_right = 117.0
+margin_bottom = 124.0
+text = "March 17th"
+
+[node name="Label6" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 128.0
+margin_right = 117.0
+margin_bottom = 156.0
+text = "March 17th"
+
+[node name="Label7" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 160.0
+margin_right = 117.0
+margin_bottom = 188.0
+text = "March 17th"
+
+[node name="Label8" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 192.0
+margin_right = 117.0
+margin_bottom = 220.0
+text = "March 17th"
+
+[node name="Label9" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 224.0
+margin_right = 117.0
+margin_bottom = 252.0
+text = "March 17th"
+
+[node name="Label10" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 256.0
+margin_right = 117.0
+margin_bottom = 284.0
+text = "March 17th"
+
+[node name="Label11" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 288.0
+margin_right = 117.0
+margin_bottom = 316.0
+text = "March 17th"
+
+[node name="Label12" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 320.0
+margin_right = 117.0
+margin_bottom = 348.0
+text = "March 17th"
+
+[node name="Label13" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 352.0
+margin_right = 117.0
+margin_bottom = 380.0
+text = "March 17th"
+
+[node name="Label14" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer"]
+margin_top = 384.0
+margin_right = 117.0
+margin_bottom = 412.0
+text = "March 17th"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer"]
+margin_left = 121.0
+margin_right = 271.0
+margin_bottom = 412.0
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_right = 150.0
+margin_bottom = 28.0
+theme = ExtResource( 3 )
+text = "      +   $300.00"
+
+[node name="Label3" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 32.0
+margin_right = 150.0
+margin_bottom = 60.0
+theme = ExtResource( 3 )
+text = "      +   $720.00"
+
+[node name="Label4" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 64.0
+margin_right = 150.0
+margin_bottom = 92.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label5" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 96.0
+margin_right = 150.0
+margin_bottom = 124.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label6" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 128.0
+margin_right = 150.0
+margin_bottom = 156.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label7" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 160.0
+margin_right = 150.0
+margin_bottom = 188.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label8" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 192.0
+margin_right = 150.0
+margin_bottom = 220.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label9" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 224.0
+margin_right = 150.0
+margin_bottom = 252.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label10" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 256.0
+margin_right = 150.0
+margin_bottom = 284.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label11" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 288.0
+margin_right = 150.0
+margin_bottom = 316.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label12" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 320.0
+margin_right = 150.0
+margin_bottom = 348.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label13" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 352.0
+margin_right = 150.0
+margin_bottom = 380.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="Label14" type="Label" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+modulate = Color( 0.0745098, 0.898039, 0.0745098, 1 )
+margin_top = 384.0
+margin_right = 150.0
+margin_bottom = 412.0
+theme = ExtResource( 3 )
+text = "      +   $256.00"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2"]
+
+[node name="Line2D" type="Line2D" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 459.7, 436 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Line2D2" type="Line2D" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 461, 461 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Line2D3" type="Line2D" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 461, 483 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Line2D4" type="Line2D" parent="Panel/TabContainer/Notifications/YSort4/HBoxContainer/VBoxContainer2/CanvasLayer"]
+visible = false
+position = Vector2( 459, 507 )
+scale = Vector2( 0.7, 0.7 )
+points = PoolVector2Array( -131, -5.71429, 159, -5.71429 )
+width = 3.0
+default_color = Color( 0.647059, 0.647059, 0.647059, 1 )
+
+[node name="Label2" type="Label" parent="Panel/TabContainer/Notifications/YSort4"]
+modulate = Color( 0.0745098, 0.176471, 0.898039, 1 )
+margin_left = 527.0
+margin_top = 742.0
+margin_right = 678.0
+margin_bottom = 770.0
+rect_scale = Vector2( 0.6, 0.6 )
+theme = ExtResource( 3 )
+text = "see full list >"

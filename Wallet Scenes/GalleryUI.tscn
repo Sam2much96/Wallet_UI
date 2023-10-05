@@ -14,13 +14,10 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 288.0
+margin_left = -49.0
 margin_top = -31.0
-margin_right = 694.0
+margin_right = 1044.0
 margin_bottom = 610.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GridContainer" type="GridContainer" parent="."]
 margin_left = 324.0
